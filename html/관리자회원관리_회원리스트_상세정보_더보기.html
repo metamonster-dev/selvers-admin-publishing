@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이스 메이트</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="inner">
+
+            <h1 class="main_logo">
+                <a href="#none">
+                    <img src="../assets/images/logo/main_logo_w.png" alt="마이스 메이트">
+                </a>
+            </h1>
+            <div class="btn_wrap">
+                <button class="btn blue round">로그아웃</button>
+            </div>
+        </div>
+    </div>
+    <!-- // header -->
+    
+    <!-- container -->
+    <div class="container">
+        <div class="history_tit">
+            <a class="item" href="#none">회원관리</a>
+            <a class="item" href="#none">회원 리스트</a>
+            <a class="item" href="#none">회원 상세정보</a>
+        </div>
+        <div class="lnb_area">
+            <ul class="lnb01">
+                <li>
+                    <a href="#none" class="depth01 active">
+                        회원관리
+                        <i class="arrow_b_icon"></i>
+                    </a>
+                    <div class="depth02_list active">
+                        <a href="#none" class="depth02 active">회원 리스트</a>
+                        <a href="#none" class="depth02">기업회원 리스트</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="depth01">
+                        행사관리
+                        <i class="arrow_b_icon"></i>
+                    </a>
+                    <div class="depth02_list">
+                        <a href="#none" class="depth02">행사 리스트</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="depth01">
+                        배너관리
+                        <i class="arrow_b_icon"></i>
+                    </a>
+                    <div class="depth02_list">
+                        <a href="#none" class="depth02">메인배너</a>
+                        <a href="#none" class="depth02">띠배너</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cont_area">
+            <div class="cont_panel">
+                <div class="tit_wrap">
+                    <h3 class="tit">기본정보</h3>
+                </div>
+                <div class="table_wrap mt_14">
+                    <table class="type2">
+                        <colgroup>
+                            <col width="135px">
+                            <col width="*">
+                            <col width="135px">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>이름</th>
+                                <td>김고은</td>
+                                <th>출생년도</th>
+                                <td>9999-10-10</td>
+                            </tr>
+                            <tr>
+                                <th>아이디</th>
+                                <td>abcde@gmail.com</td>
+                                <th>성별</th>
+                                <td>여</td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호</th>
+                                <td>
+                                    <button class="btn border_w w_136">임시 비밀번호 생성</button>
+                                </td>
+                                <th>비밀번호 변경일</th>
+                                <td>
+                                    <span class="col_gray">2024-08-01 11:00:38</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>회원구분</th>
+                                <td>
+                                    <select class="btn border_w w_136">
+                                        <option value="0">임시회원</option>
+                                    </select>
+                                </td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>휴대번호</th>
+                                <td>
+                                    <input class="small w_136" type="text" value="010-0000-0000">
+                                </td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>회원가입일</th>
+                                <td>
+                                    <span class="col_gray">2024-08-01 11:00:38</span>
+                                </td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tit_wrap mt_44">
+                    <h3 class="tit">수신동의 및 개인정보 이용 동의</h3>
+                </div>
+                <div class="table_wrap mt_14">
+                    <table class="type2">
+                        <colgroup>
+                            <col width="135px">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    마케팅 정보 수신<br/>
+                                    동의 (선택)
+                                </th>
+                                <td class="ver_top">동의 이력 없음</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tit_wrap mt_44">
+                    <h3 class="tit">추가정보</h3>
+                </div>
+                <div class="table_wrap mt_14">
+                    <table class="type2">
+                        <colgroup>
+                            <col width="135px">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="ver_top">관심분야</th>
+                                <td>
+                                    <div class="dis_flex row_item_7">
+                                        <div class="checkbox item">
+                                            <input id="chk01" type="checkbox">
+                                            <label for="chk01">농축산/식음료</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk02" type="checkbox">
+                                            <label for="chk02">뷰티/화장품</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk03" type="checkbox">
+                                            <label for="chk03">섬유/의류</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk04" type="checkbox">
+                                            <label for="chk04">교육</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk05" type="checkbox">
+                                            <label for="chk05">보건/의료</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk06" type="checkbox">
+                                            <label for="chk06">웨딩</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk07" type="checkbox">
+                                            <label for="chk07">가정용품</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk08" type="checkbox">
+                                            <label for="chk08">에너지/환경</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk09" type="checkbox">
+                                            <label for="chk09">금융/부동산</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk10" type="checkbox">
+                                            <label for="chk10">금속/기계</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk11" type="checkbox">
+                                            <label for="chk11">임신/출산/육아</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk12" type="checkbox">
+                                            <label for="chk12">건설/건축</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk13" type="checkbox">
+                                            <label for="chk13">문화/예술</label>
+                                        </div>
+                                        <div class="checkbox item">
+                                            <input id="chk14" type="checkbox">
+                                            <label for="chk14">레저/관광</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="ver_top">행사 관리</th>
+                                <td>
+                                    <div>
+                                        <select class="btn border_w w_136">
+                                            <option value="0">신청 행사</option>
+                                        </select>
+                                    </div>
+                                    <div class="table_wrap min_h_300">
+                                        <table class="type1">
+                                            <colgroup>
+                                                <col width="130px">
+                                                <col width="240px">
+                                                <col width="">
+                                                <col width="220px">
+                                                <col width="220px">
+                                                <col width="">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>행사번호</th>
+                                                    <th>행사명</th>
+                                                    <th></th>
+                                                    <th>행사 일시</th>
+                                                    <th>행사 신청일</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>000001</td>
+                                                    <td>2024 미래 농업 엑스포</td>
+                                                    <td></td>
+                                                    <td>08월24일(토) 10:00</td>
+                                                    <td>07월01일(월) 10:00</td>
+                                                    <td></td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>000001</td>
+                                                    <td>2024 미래 농업 엑스포</td>
+                                                    <td></td>
+                                                    <td>08월24일(토) 10:00</td>
+                                                    <td>07월01일(월) 10:00</td>
+                                                    <td></td>
+                                                </tr>                                                
+                                                <tr>
+                                                    <td>000001</td>
+                                                    <td>2024 미래 농업 엑스포</td>
+                                                    <td></td>
+                                                    <td>08월24일(토) 10:00</td>
+                                                    <td>07월01일(월) 10:00</td>
+                                                    <td></td>
+                                                </tr>                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="dis_flex justify_between mt_64">
+                    <div class="btn_wrap">
+                    </div>
+                    <div class="btn_wrap gap23">
+                        <button class="btn blue">취소</button>
+                        <button class="btn blue" onclick="toast01()">수정</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // container -->
+    
+</div>    
+<script src="../assets/js/common.js"></script>
+<script>
+    function toast01(){
+        action_pop.toast('수정되었습니다.')
+    } 
+</script>
+</body>
+</html>
