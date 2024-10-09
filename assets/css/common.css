@@ -303,6 +303,11 @@ input:-webkit-autofill:active {
 .date_inp_wrap{position:relative;}
 .date_inp_wrap input[type="date"]{position:absolute; right:15px; top:0; width:19px; padding:0; border:0; cursor: pointer;}
 
+.num_inp_wrap{position:relative; border-radius:10px;}
+.num_inp_wrap input{width:100%;}
+.num_inp_wrap .increase{width:25px; height:24px; right:1px; top:1px; position:absolute; background:#0D224F url('../images/icon/arrow_t_icon.png') no-repeat center/10px; border-top-right-radius:10px;}
+.num_inp_wrap .decrease{width:25px; height:24px; right:1px; bottom:1px; position:absolute; background:#0D224F url('../images/icon/arrow_b_icon.png') no-repeat center/10px; border-bottom-right-radius:10px;}
+
 input.small.search{padding-left:44px; background:url('../images/icon/search_icon.png') no-repeat left 12px center/15px;}
 
 .file_inp{width:75px; height:75px; display:inline-flex; flex-direction:column; justify-content:center; align-items:center; gap:6px; border:.5px solid #fff; border-radius:10px; cursor:pointer; font-size:12px;}
@@ -508,11 +513,15 @@ table.type4 tbody td{height:44px;}
 
 .border_item{height:64px; border:.5px solid #FFFFFF; border-radius:10px; padding:0 20px; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:6px;}
 
-.border_item_list li{height:70px; border:.5px solid #fff; border-radius:10px; border-left-width:10px; padding:0 18px 0 48px; display:flex; align-items:center; justify-content:space-between;}
+.border_item_list li{height:70px; border:.5px solid #fff; border-radius:10px; padding:0 18px 0 48px; display:flex; align-items:center; justify-content:space-between; position:relative; overflow:hidden; gap:9px;}
+.border_item_list li:before{content:''; display:block; position:absolute; left:0; top:0; bottom:0; width:9px; background-color:#fff;}
 .border_item_list li ~ li{margin-top:14px;}
 .border_item_list li .tit{font-size:22px; font-weight:600;}
 .border_item_list li .btn{min-width:92px; height:40px; font-size:16px;}
 .border_item_list li .btn.gray{color:#FFFFFF80;}
+.border_item_list li .state{flex:1; color:#09338C; font-size:12px;}
+.border_item_list li.blue:before{background-color:#09338C;}
+.border_item_list li.blue .btn.gray{background-color:transparent; border:.5px solid #FFFFFF}
 
 .survey_card{border:.5px solid #FFFFFF80; border-radius:10px; padding:20px 16px 16px 20px; position:relative; overflow:hidden;}
 .survey_card:before{content:''; display:block; position:absolute; top:0; bottom:0; left:0; width:9px; background-color:#09338C;}

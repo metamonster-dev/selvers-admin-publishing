@@ -42,6 +42,18 @@ $(function () {
         $(this).closest('.checkbox02').find('input').attr('required', !required)
     })
 
+    /* 큰사이즈 num input */
+    $('.num_inp_wrap .increase, .num_inp_wrap .decrease').on('click', function(){
+        let input = $(this).siblings('input')
+        let val = input.val()
+        if($(this).hasClass('increase')){
+            input.val( input.val()*1 + 1 )
+        }
+        if($(this).hasClass('decrease') && val > 0){
+            input.val( input.val()*1 - 1 )
+        }
+    })
+
     
 });
 
