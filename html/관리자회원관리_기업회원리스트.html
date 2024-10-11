@@ -115,7 +115,9 @@
                                 <td>
                                     <div class="dis_inblock">
                                         <select class="btn border_w">
-                                            <option value="0">진행상태</option>
+                                            <option selected disabled>진행상태</option>
+                                            <option value="1">기업회원</option>
+                                            <option value="2">탈퇴회원</option>
                                         </select>
                                     </div>
                                     <div class="dis_inblock">
@@ -148,7 +150,7 @@
                 </div>
 
                 <div class="table_wrap mt_22">
-                    <table class="type1">
+                    <table class="type1 table_hover">
                         <colgroup>
                             <col width="16px">
                             <col width="130px">
@@ -162,7 +164,7 @@
                             <tr>
                                 <th>
                                     <div class="checkbox">
-                                        <input id="t_chkAll" type="checkbox">
+                                        <input id="t_chkAll" type="checkbox" onchange="t_chkAll(event)">
                                         <label for="t_chkAll">
                                         </label>
                                     </div>
@@ -176,7 +178,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_기업회원리스트_승인기업.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk01" type="checkbox">
@@ -193,7 +195,7 @@
                                     <span>승인기업</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_기업회원리스트_탈퇴기업.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk02" type="checkbox">
@@ -210,7 +212,7 @@
                                     <span class="col_gray">탈퇴기업</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_기업회원리스트_승인대기회원상세정보.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk03" type="checkbox">
@@ -227,7 +229,7 @@
                                     <span class="btn small light_blue">승인대기</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_기업회원리스트_승인기업.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk04" type="checkbox">
@@ -244,7 +246,7 @@
                                     <span>승인기업</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_기업회원리스트_탈퇴기업.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk05" type="checkbox">
@@ -261,7 +263,7 @@
                                     <span class="col_gray">탈퇴기업</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_기업회원리스트_승인대기회원상세정보.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk06" type="checkbox">
@@ -319,6 +321,13 @@
                 action_pop.toast('삭제 처리되었습니다.')
             }
         })
+    }
+
+    function t_chkAll(e){
+        let _this = $(e.target)
+        let checked = _this.prop('checked')
+        let chkArr = _this.closest('table').find('tbody input[type="checkbox"]')
+        chkArr.prop('checked', checked)
     }
 </script>
 </body>

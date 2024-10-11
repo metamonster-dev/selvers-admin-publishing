@@ -81,7 +81,8 @@
                                 <td>
                                     <div class="dis_inblock">
                                         <select class="btn border_w w_96">
-                                            <option value="0">등록일</option>
+                                            <option value="1">등록일</option>
+                                            <option value="2">게시일</option>
                                         </select>
                                     </div>
                                     <div class="dis_inblock">
@@ -120,7 +121,9 @@
                                 <td>
                                     <div class="dis_inblock">
                                         <select class="btn border_w w_96">
-                                            <option value="0">전체</option>
+                                            <option value="1">노출</option>
+                                            <option value="2">노출 안함</option>
+                                            <option value="3">종료</option>
                                         </select>
                                     </div>
                                     <div class="dis_inblock">
@@ -147,8 +150,8 @@
                         <button class="sort_btn">정렬</button>
                     </div>
                     <div>
-                        <button>추가</button>
-                        <button class="ml_22">삭제</button>
+                        <button onclick="window.location.href='./관리자배너관리_띠배너_추가.html'">추가</button>
+                        <button onclick="confirm01()" class="ml_22">삭제</button>
                     </div>
                 </div>
 
@@ -168,7 +171,7 @@
                             <tr>
                                 <th>
                                     <div class="checkbox">
-                                        <input id="t_chkAll" type="checkbox">
+                                        <input id="t_chkAll" type="checkbox" onchange="t_chkAll(event)">
                                         <label for="t_chkAll">
                                         </label>
                                     </div>
@@ -193,7 +196,11 @@
                                 <td>
                                     <span class="btn border_w w_60">10</span>
                                 </td>
-                                <td class="txt_left">배너명1</td>
+                                <td class="txt_left">
+                                    <a href="./관리자배너관리_띠배너_수정.html">
+                                        배너명1
+                                    </a>
+                                </td>
                                 <td></td>
                                 <td>
                                     <div class="banner_img">
@@ -214,7 +221,11 @@
                                 <td>
                                     <span class="btn border_w w_60">10</span>
                                 </td>
-                                <td class="txt_left">배너명1</td>
+                                <td class="txt_left">
+                                    <a href="./관리자배너관리_띠배너_수정.html">
+                                        배너명1
+                                    </a>
+                                </td>
                                 <td></td>
                                 <td>
                                     <div class="banner_img">
@@ -235,7 +246,11 @@
                                 <td>
                                     <span class="btn border_w w_60">10</span>
                                 </td>
-                                <td class="txt_left">배너명1</td>
+                                <td class="txt_left">
+                                    <a href="./관리자배너관리_띠배너_수정.html">
+                                        배너명1
+                                    </a>
+                                </td>
                                 <td></td>
                                 <td>
                                     <div class="banner_img">
@@ -272,21 +287,21 @@
 </div>    
 <script src="../assets/js/common.js"></script>
 <script>
+
     function confirm01(){
-        action_pop.confirm({
-            title:'선택 [2건]을 [탈퇴]<br/>처리 하시겠습니까?',
-            callback: function(){
-                action_pop.toast('탈퇴 처리되었습니다.')
-            }
-        })
-    }
-    function confirm02(){
         action_pop.confirm({
             title:'선택 [2건]을 [삭제]<br/>처리 하시겠습니까?',
             callback: function(){
                 action_pop.toast('삭제 처리되었습니다.')
             }
         })
+    }
+
+    function t_chkAll(e){
+        let _this = $(e.target)
+        let checked = _this.prop('checked')
+        let chkArr = _this.closest('table').find('tbody input[type="checkbox"]')
+        chkArr.prop('checked', checked)
     }
 </script>
 </body>

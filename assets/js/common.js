@@ -37,10 +37,10 @@ $(function () {
     })
 
     /* 큰사이즈 checkbox 필수 여부 선택 */
-    $('.required_toggle_btn').on('click', function () {
+    /* $('.required_toggle_btn').on('click', function () {
         let required = $(this).closest('.checkbox02').find('input').attr('required')
         $(this).closest('.checkbox02').find('input').attr('required', !required)
-    })
+    }) */
 
     /* 큰사이즈 num input */
     $('.num_inp_wrap .increase, .num_inp_wrap .decrease').on('click', function(){
@@ -52,6 +52,11 @@ $(function () {
         if($(this).hasClass('decrease') && val > 0){
             input.val( input.val()*1 - 1 )
         }
+    })
+
+    // 이벤트 버블링 차단
+    $('.checkbox').on('click', function(event){
+        event.stopPropagation()
     })
 
     

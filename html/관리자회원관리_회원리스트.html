@@ -115,7 +115,9 @@
                                 <td>
                                     <div class="dis_inblock">
                                         <select class="btn border_w">
-                                            <option value="0">회원유형</option>
+                                            <option selected disabled>회원유형</option>
+                                            <option value="1">일반회원</option>
+                                            <option value="2">탈퇴회원</option>
                                         </select>
                                     </div>
                                     <div class="dis_inblock">
@@ -148,7 +150,7 @@
                 </div>
 
                 <div class="table_wrap mt_22">
-                    <table class="type1">
+                    <table class="type1 table_hover">
                         <colgroup>
                             <col width="16px">
                             <col width="130px">
@@ -164,7 +166,7 @@
                             <tr>
                                 <th>
                                     <div class="checkbox">
-                                        <input id="t_chkAll" type="checkbox">
+                                        <input id="t_chkAll" type="checkbox" onchange="t_chkAll(event)">
                                         <label for="t_chkAll">
                                         </label>
                                     </div>
@@ -180,7 +182,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_회원리스트_상세정보.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk01" type="checkbox">
@@ -199,7 +201,7 @@
                                     <span>일반회원</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_회원리스트_상세정보.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk02" type="checkbox">
@@ -218,7 +220,7 @@
                                     <span class="col_gray">탈퇴회원</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_회원리스트_상세정보.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk03" type="checkbox">
@@ -237,7 +239,7 @@
                                     <span>일반회원</span>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr onclick="window.location.href='./관리자회원관리_회원리스트_상세정보.html'">
                                 <td>
                                     <div class="checkbox">
                                         <input id="t_chk04" type="checkbox">
@@ -298,6 +300,14 @@
             }
         })
     }
+    function t_chkAll(e){
+        let _this = $(e.target)
+        let checked = _this.prop('checked')
+        let chkArr = _this.closest('table').find('tbody input[type="checkbox"]')
+        chkArr.prop('checked', checked)
+    }
+
+
 </script>
 </body>
 </html>

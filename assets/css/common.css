@@ -177,6 +177,8 @@ select::-ms-expand{ display:none; }
 select{background-color:transparent; border:.5px solid #fff; border-radius:10px; height:48px; padding:0 18px;}
 select{background:url('../images/icon/select_arrow_big.png') no-repeat right 20px center/10px;}
 select option{color:#000;}
+select[readonly]{pointer-events: none;}
+select option:disabled{display:none;}
 
 /* 텍스트박스(공통사항)-자동완성스타일 */
 input:-webkit-autofill,
@@ -219,6 +221,8 @@ input:-webkit-autofill:active {
 .txt_left{text-align:left !important;}
 .txt_right{text-align:right !important;}
 
+.underline{text-decoration:underline;}
+
 /* font-size */
 .fs_0{font-size:0;}
 .fs_11{font-size:11px;}
@@ -244,6 +248,7 @@ input:-webkit-autofill:active {
 .col_gray{color:rgba(255, 255, 255, .5)}
 .col_red{color:#f66;}
 .col_orange{color:#FFAD15 !important;}
+.col_blue{color:#1A73E8;}
 
 /* margin */
 .mt_4{margin-top:4px;}
@@ -265,6 +270,7 @@ input:-webkit-autofill:active {
 .mt_48{margin-top:48px;}
 .mt_55{margin-top:55px;}
 .mt_62{margin-top:62px;}
+.mt_63{margin-top:63px !important;}
 .mt_64{margin-top:64px;}
 .mt_80{margin-top:80px;}
 .mt_190{margin-top:190px;}
@@ -297,6 +303,7 @@ input:-webkit-autofill:active {
 
 
 /* height */
+
 .min_h_300{min-height:300px;}
 
 
@@ -413,7 +420,7 @@ input:checked + .btn.border_w{background-color:#fff; color:#1E9EFF}
 .lnb_area .lnb01 .depth02_list .depth02{display:flex; width:100%; align-items:center; height:40px; border-radius:20px; font-size:16px; font-weight:500; color:#FFFFFF80; padding:0 26px;}
 .lnb_area .lnb01 .depth01.active,
 .lnb_area .lnb01 .depth01:hover{color:#fff;}
-.lnb_area .lnb01 .depth02_list .depth02 ~ .depth02{margin-top:4px;}
+.lnb_area .lnb01 .depth02_list .depth02 ~ .depth02{margin-top:10px;}
 .lnb_area .lnb01 .depth01.active .arrow_b_icon{transform:rotateZ(180deg)}
 .lnb_area .lnb01 .depth02_list.active{max-height:150px; padding-top:18px;}
 .lnb_area .lnb01 .depth02_list .depth02.active,
@@ -431,6 +438,7 @@ input:checked + .btn.border_w{background-color:#fff; color:#1E9EFF}
 .lnb_area .lnb02 .depth01{font-size:16px; font-weight:700; color:#FFFFFF80; display:flex; align-items:center; justify-content:flex-start; gap:20px; padding:0 29px;}
 .lnb_area .lnb02 .depth02_list{max-height:0; padding-top:0; transition:all 1s; overflow:hidden;}
 .lnb_area .lnb02 .depth02_list .depth02{display:flex; width:100%; height:40px; align-items:center; padding-left:45px; border-radius:20px; color:#FFFFFF80;}
+.lnb_area .lnb02 .depth02_list .depth02 ~ .depth02{margin-top:10px;}
 .lnb_area .lnb02 .depth01.active,
 .lnb_area .lnb02 .depth01:hover{color:#fff;}
 .lnb_area .lnb02 .depth01.active .arrow_b_icon{transform:rotateZ(180deg)}
@@ -456,6 +464,9 @@ table.type1 tbody td{padding:9.5px 4px; font-weight:500; font-size:16px;}
 table.type1 tbody tr:first-child td{padding-top:26px;}
 table.type1 tbody td .btn.small{margin:-10px 0;}
 
+table.type1.table_hover tbody tr:hover td{background-color:#FFFFFF1A;}
+
+
 table table.type1 thead th{border:0; padding-bottom:0;}
 table table.type1 tbody td{border:0;}
 table table.type1 tbody tr:first-child td{padding-top:9.5px;}
@@ -480,6 +491,8 @@ table.type4{width:100%;}
 table.type4 tbody th,
 table.type4 tbody td{height:44px;}
 
+table i.btn.small{cursor:default;}
+
 
 /* modal_wrap */
 .modal_wrap{position:fixed; inset:0; z-index:1000; color:#000;}
@@ -490,7 +503,7 @@ table.type4 tbody td{height:44px;}
 .modal_wrap .modal_inner .modal_body .modal_tit{font-size:16px; color:#000; font-weight:700; text-align:center;padding-bottom:20px;}
 .modal_wrap .modal_inner .modal_btn{margin-top:9px; display:flex; justify-content:center; align-items:center; gap:80px;}
 .modal_wrap .modal_inner .modal_btn > *{width:44px; font-size:16px; color:#000; font-weight:700;}
-.modal_wrap.prompt01 textarea{border:.5px solid #969696; border-radius:10px; background-color:#F7F7F7; padding:10px 22px; font-size:12px;}
+.modal_wrap.prompt01 textarea{border:.5px solid #969696; border-radius:10px; background-color:#F7F7F7; padding:10px 22px; font-size:12px; color:#000;}
 .modal_wrap.prompt01 textarea::placeholder{color:#000;}
 
 /* toast_pop */

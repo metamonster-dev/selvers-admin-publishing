@@ -55,12 +55,7 @@
                             <a href="./관리자행사관리_행사리스트_새로운행사등록2단계_게시하기.html" class="depth02">FAQ & 문의</a>
                         </div>
                     </li>
-                    <li>
-                        <a href="#none" class="depth01">참가자 관리</a>
-                    </li>
-                    <li>
-                        <a href="#none" class="depth01">참가기업 관리</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -82,7 +77,7 @@
                     <h3 class="fs_20">프로젝트 제목 <i class="col_red">*</i></h3>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
-                    <input class="w_767" type="text" value="2024 대한민국 농업박람회">
+                    <input class="w_767" type="text" value="2024 대한민국 농업박람회" readonly>
                     <div class="checkbox big">
                         <input id="chk01" type="checkbox">
                         <label for="chk01"></label>
@@ -93,7 +88,7 @@
                     <h3 class="fs_20">행사 분야 <i class="col_red">*</i></h3>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
-                    <select class="w_767">
+                    <select class="w_767" readonly>
                         <option value="0">농축산 · 식음료</option>
                     </select>
                     <div class="checkbox big">
@@ -126,12 +121,12 @@
                 </div>
                 <div class="dis_flex mt_10 gap16">
                     <div>
-                        <input type="file" id="fileInp01" class="hide">
+                        <input type="file" id="fileInp01" class="hide" readonly>
                         <label for="fileInp01" class="file_inp vertical">0 / 1</label>
                         <p class="txt_center fs_12 mt_7">세로형</p>
                     </div>
                     <div>
-                        <input type="file" id="fileInp01" class="hide">
+                        <input type="file" id="fileInp01" class="hide" readonly>
                         <label for="fileInp01" class="file_inp horizontal">0 / 1</label>
                         <p class="txt_center fs_12 mt_7">가로형</p>
                     </div>
@@ -143,12 +138,12 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
                     <div class="dis_flex w_767">
                         <div class="date_inp_wrap flex1">
-                            <input class="w_full" type="text" readonly="" placeholder="행사 시작 일자를 선택해주세요.">
+                            <input class="w_full" type="text" readonly="" placeholder="행사 시작 일자를 선택해주세요." readonly>
                             <input type="date">
                         </div>
                         <span class="fs_20">&nbsp;~&nbsp;</span>
                         <div class="date_inp_wrap flex1">
-                            <input class="w_full" type="text" readonly="" placeholder="행사 종료 일자를 선택해주세요.">
+                            <input class="w_full" type="text" readonly="" placeholder="행사 종료 일자를 선택해주세요." readonly>
                             <input type="date">
                         </div>
                     </div>
@@ -186,7 +181,7 @@
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
                     <div class="dis_flex w_767">
-                        <select class="w_372">
+                        <select class="w_372" readonly>
                             <option value="0">농축산 · 식음료</option>
                         </select>
                     </div>
@@ -202,16 +197,16 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
                     <div class="dis_flex w_767 gap11">
                         <div class="checkbox02 flex1 col_gray">
-                            <input id="chk07" type="checkbox">
-                            <label for="chk07">오프라인 행사</label>
+                            <input id="chk07_01" type="checkbox">
+                            <label for="chk07_01" onclick="return false;">오프라인 행사</label>
                         </div>
                         <div class="checkbox02 flex1 col_gray">
-                            <input id="chk08" type="checkbox">
-                            <label for="chk08">온라인 행사</label>
+                            <input id="chk07_02" type="checkbox">
+                            <label for="chk07_02" onclick="return false;">온라인 행사</label>
                         </div>
                         <div class="checkbox02 flex1 col_gray">
-                            <input id="chk09" type="checkbox">
-                            <label for="chk09">하이브리드 행사</label>
+                            <input id="chk07_03" type="checkbox" checked>
+                            <label for="chk07_03" onclick="return false;">하이브리드 행사</label>
                         </div>
                     </div>
                     <div class="checkbox big">
@@ -220,21 +215,21 @@
                     </div>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_18">
-                    <input class="w_767" type="text" placeholder="온라인 행사 url를 입력해주세요. (온라인 / 하이브리드 행사 선택 시)">
+                    <input class="w_767" type="text" placeholder="온라인 행사 url를 입력해주세요. (온라인 / 하이브리드 행사 선택 시)" readonly>
                 </div>
                 
                 <div class="tit_wrap mt_25">
                     <h3 class="fs_20">행사 운영 위치 <i class="col_red">*</i></h3>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
-                    <input class="w_767" type="text" placeholder="도로명/지번 주소 검색 (오프라인 / 하이브리드 행사 선택 시)">
+                    <input class="w_767" type="text" placeholder="도로명/지번 주소 검색 (오프라인 / 하이브리드 행사 선택 시)" readonly>
                     <div class="checkbox big">
                         <input id="chk08" type="checkbox">
                         <label for="chk08"></label>
                     </div>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_18">
-                    <input class="w_767" type="text" placeholder="세부 주소">
+                    <input class="w_767" type="text" placeholder="세부 주소" readonly>
                 </div>
 
                 <div class="dis_flex justify_between mt_48">

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이스 메이트</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="inner">
+
+            <h1 class="main_logo">
+                <a href="#none">
+                    <img src="../assets/images/logo/main_logo_w.png" alt="마이스 메이트">
+                </a>
+            </h1>
+            <div class="btn_wrap">
+                <button class="btn blue round">로그아웃</button>
+            </div>
+        </div>
+    </div>
+    <!-- // header -->
+    
+    <!-- container -->
+    <div class="container">
+        <div class="history_tit">
+            <a class="item" href="#none">배너관리</a>
+            <a class="item" href="#none">메인배너</a>
+            <a class="item" href="#none">수정</a>
+        </div>
+        <div class="lnb_area">
+            <ul class="lnb01">
+                <li>
+                    <a href="#none" class="depth01">
+                        회원관리
+                        <i class="arrow_b_icon"></i>
+                    </a>
+                    <div class="depth02_list">
+                        <a href="./관리자회원관리_회원리스트.html" class="depth02">회원 리스트</a>
+                        <a href="./관리자회원관리_기업회원리스트.html" class="depth02">기업회원 리스트</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="depth01">
+                        행사관리
+                        <i class="arrow_b_icon"></i>
+                    </a>
+                    <div class="depth02_list">
+                        <a href="./관리자행사관리_행사리스트.html" class="depth02">행사 리스트</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#none" class="depth01 active">
+                        배너관리
+                        <i class="arrow_b_icon"></i>
+                    </a>
+                    <div class="depth02_list active">
+                        <a href="./관리자배너관리_메인베너.html" class="depth02 active">메인배너</a>
+                        <a href="./관리자배너관리_띠배너.html" class="depth02">띠배너</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cont_area">
+            <div class="cont_panel">
+                <div class="tit_wrap">
+                    <h3 class="tit02">배너명 <i class="col_red">*</i></h3>
+                </div>
+                <div class="dis_flex mt_10">
+                    <input class="w_767" type="text" placeholder="배너명 입력">
+                </div>
+
+                <div class="tit_wrap mt_25">
+                    <h3 class="tit02">노출일 <i class="col_red">*</i></h3>
+                </div>
+                <div class="dis_flex mt_10">
+                    <div class="dis_flex w_767">
+                        <div class="date_inp_wrap flex1">
+                            <input class="w_full" type="text" readonly placeholder="노출 시작 날짜">
+                            <input type="date">
+                        </div>
+                        <span class="fs_20">&nbsp;~&nbsp;</span>
+                        <div class="date_inp_wrap flex1">
+                            <input class="w_full" type="text" readonly placeholder="노출 종료 날짜">
+                            <input type="date">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tit_wrap mt_25">
+                    <h3 class="tit02">배너 이미지 <i class="col_red">*</i></h3>
+                </div>
+                <div class="dis_flex mt_10">
+                    <div class="infomation_blue_box w_767">
+                        <div class="dis_flex gap5 fs_12 fw_600">
+                            <i class="info_icon"></i>
+                            <span>배너 이미지 등록 가이드</span>
+                        </div>
+                        <div class="mt_8 fs_12 fw_500 pl_15">
+                            · 10MB 이하의 JPG, JPEG, PNG 파일<br/>
+                            · 해상도 1920*1080픽셀
+                        </div>
+                    </div>
+                </div>
+                <div class="dis_flex mt_10">
+                    <div>
+                        <input type="file" id="fileInp01" class="hide">
+                        <label for="fileInp01" class="file_inp">0 / 1</label>
+                    </div>
+                </div>
+
+                <div class="tit_wrap mt_25">
+                    <h3 class="tit02">URL <i class="col_red">*</i></h3>
+                </div>
+                <div class="dis_flex mt_10">
+                    <input class="w_767" type="text" placeholder="URL 입력">
+                </div>
+
+                <div class="mt_48">
+                    <div class="checkbox">
+                        <input id="chk01" type="checkbox">
+                        <label for="chk01">노출 안함</label>
+                    </div>
+                </div>
+
+
+                <div class="dis_flex justify_between mt_64">
+                    <div class="btn_wrap">
+                    </div>
+                    <div class="btn_wrap gap23">
+                        <button class="btn blue">취소</button>
+                        <button class="btn blue">수정</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // container -->
+    
+</div>    
+<script src="../assets/js/common.js"></script>
+</body>
+</html>

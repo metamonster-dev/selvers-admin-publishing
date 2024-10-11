@@ -56,12 +56,7 @@
                             <a href="./관리자행사관리_행사리스트_새로운행사등록2단계_게시하기.html" class="depth02">FAQ & 문의</a>
                         </div>
                     </li>
-                    <li>
-                        <a href="#none" class="depth01">참가자 관리</a>
-                    </li>
-                    <li>
-                        <a href="#none" class="depth01">참가기업 관리</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -74,8 +69,10 @@
                 <div class="tit_wrap mt_12">
                     <h3 class="fs_18">행사 등록을 위한 내용을 작성해주세요.</h3>
                 </div>
-
-                <div class="tit_wrap mt_62">
+                <div class="dis_flex justify_end mt_30">
+                    <div class="fs_18 fw_500 pr_20">수정요청 항목</div>
+                </div>
+                <div class="tit_wrap mt_10">
                     <h3 class="tit02">행사 상세내용 <i class="col_red">*</i></h3>
                 </div>
                 <div class="tit_wrap mt_4">
@@ -101,7 +98,7 @@
 
                 <div class="dis_flex align_start justify_between pr_52 mt_20">
                     <div class="w_767">
-                        <textarea name="smartEditor01" id="smartEditor01" rows="25"></textarea>
+                        <textarea name="smartEditor01" id="smartEditor01" rows="25" readonly>readonly</textarea>
                     </div>
                 </div>
 
@@ -112,7 +109,7 @@
                     <p class="fs_12">본 행사를 설명해줄 태그를 입력해주세요.</p>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
-                    <input class="w_372" type="text" placeholder="태그는 최대 5개까지 입력 가능합니다.">
+                    <input class="w_372" type="text" placeholder="태그는 최대 5개까지 입력 가능합니다." readonly>
                     <div class="checkbox big">
                         <input id="chk04" type="checkbox">
                         <label for="chk04"></label>
@@ -158,7 +155,7 @@
     
 </div>    
 <script src="../assets/js/common.js"></script>
-<script>
+<script type="text/javascript">
 
     $(function(){
         smartEditor()
@@ -169,7 +166,7 @@
         nhn.husky.EZCreator.createInIFrame({
             oAppRef: oEditors,
             elPlaceHolder: "smartEditor01",
-            sSkinURI: "../assets/lib/smarteditor2-2.9.2/workspace/SmartEditor2Skin.html",
+            sSkinURI: "../assets/lib/smarteditor2-2.9.2/dist/SmartEditor2Skin.html",
             fCreator: "createSEditor2"
         })
     }

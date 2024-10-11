@@ -55,12 +55,7 @@
                             <a href="./관리자행사관리_행사리스트_새로운행사등록2단계_게시하기.html" class="depth02 active">FAQ & 문의</a>
                         </div>
                     </li>
-                    <li>
-                        <a href="#none" class="depth01">참가자 관리</a>
-                    </li>
-                    <li>
-                        <a href="#none" class="depth01">참가기업 관리</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -84,12 +79,12 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
                     <div class="dis_flex w_767 gap32">
                         <div class="checkbox02 flex1">
-                            <input id="rad01_1" type="radio" name="rad01">
-                            <label for="rad01_1">사용함</label>
+                            <input id="rad01_1" type="radio" name="rad01" checked>
+                            <label for="rad01_1" onclick="return false;">사용함</label>
                         </div>
                         <div class="checkbox02 flex1">
                             <input id="rad01_2" type="radio" name="rad01">
-                            <label for="rad01_2">사용하지 않음</label>
+                            <label for="rad01_2" onclick="return false;">사용하지 않음</label>
                         </div>
                     </div>
                     <div class="checkbox big">
@@ -105,10 +100,10 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_14">                    
                     <div class="survey_card w_767">
                         <div class="head">
-                            <input type="text" placeholder="Q. 제목을 입력해주세요.">
+                            <input type="text" placeholder="Q. 제목을 입력해주세요." readonly>
                         </div>
                         <div class="body">
-                            <input type="text" placeholder="A. 답변을 입력해주세요.">
+                            <input type="text" placeholder="A. 답변을 입력해주세요." readonly>
                         </div>
                         <div class="btm">
                             <button class="file_btn"></button>
@@ -130,17 +125,17 @@
                     <h3 class="fs_20">문의 담당자 <i class="col_red">*</i></h3>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
-                    <input class="w_767" type="text" value="이름">
+                    <input class="w_767" type="text" value="이름" readonly>
                     <div class="checkbox big">
                         <input id="chk03" type="checkbox">
                         <label for="chk03"></label>
                     </div>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
-                    <input class="w_767" type="text" value="이메일">
+                    <input class="w_767" type="text" value="이메일" readonly>
                 </div>
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
-                    <input class="w_767" type="text" value="휴대전화 번호">
+                    <input class="w_767" type="text" value="휴대전화 번호" readonly>
                 </div>
 
                 <div class="dis_flex justify_between mt_48">

@@ -55,12 +55,7 @@
                             <a href="./관리자행사관리_행사리스트_새로운행사등록2단계_게시하기.html" class="depth02">FAQ & 문의</a>
                         </div>
                     </li>
-                    <li>
-                        <a href="#none" class="depth01">참가자 관리</a>
-                    </li>
-                    <li>
-                        <a href="#none" class="depth01">참가기업 관리</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -84,12 +79,12 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_10">
                     <div class="dis_flex w_767 gap32">
                         <div class="checkbox02 flex1">
-                            <input id="rad01_1" type="radio" name="rad01">
-                            <label for="rad01_1">사용함</label>
+                            <input id="rad01_1" type="radio" name="rad01" checked>
+                            <label for="rad01_1" onclick="return false;">사용함</label>
                         </div>
                         <div class="checkbox02 flex1">
                             <input id="rad01_2" type="radio" name="rad01">
-                            <label for="rad01_2">사용하지 않음</label>
+                            <label for="rad01_2" onclick="return false;">사용하지 않음</label>
                         </div>
                     </div>
                     <div class="checkbox big">
@@ -105,8 +100,8 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_14">                    
                     <div class="survey_card w_767">
                         <div class="head">
-                            <input type="text" placeholder="설문 제목을 입력해주세요.">
-                            <select>
+                            <input type="text" placeholder="설문 제목을 입력해주세요." readonly>
+                            <select readonly>
                                 <option value="1" selected>단일 선택</option>
                                 <option value="2">다중 선택</option>
                                 <option value="3">장문</option>
@@ -115,7 +110,7 @@
                         <div class="body">
                             <div class="option_tit">옵션 1</div>
                             <div class="option_tit">
-                                <input type="text" placeholder="옵션을 입력해주세요.">
+                                <input type="text" placeholder="옵션을 입력해주세요." readonly>
                             </div>
                             <button class="option_add_btn">옵션 추가</button>
                         </div>
@@ -134,8 +129,8 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_25">                    
                     <div class="survey_card w_767">
                         <div class="head">
-                            <input type="text" placeholder="설문 제목을 입력해주세요.">
-                            <select>
+                            <input type="text" placeholder="설문 제목을 입력해주세요." readonly>
+                            <select readonly>
                                 <option value="1">단일 선택</option>
                                 <option value="2" selected>다중 선택</option>
                                 <option value="3">장문</option>
@@ -144,7 +139,7 @@
                         <div class="body">
                             <div class="option_tit">옵션 1</div>
                             <div class="option_tit">
-                                <input type="text" placeholder="옵션을 입력해주세요.">
+                                <input type="text" placeholder="옵션을 입력해주세요." readonly>
                             </div>
                             <button class="option_add_btn">옵션 추가</button>
                         </div>
@@ -163,15 +158,15 @@
                 <div class="dis_flex align_start justify_between pr_52 mt_25">                    
                     <div class="survey_card w_767">
                         <div class="head">
-                            <input type="text" placeholder="설문 제목을 입력해주세요.">
-                            <select>
+                            <input type="text" placeholder="설문 제목을 입력해주세요." readonly>
+                            <select readonly>
                                 <option value="1">단일 선택</option>
                                 <option value="2">다중 선택</option>
                                 <option value="3" selected>장문</option>
                             </select>
                         </div>
                         <div class="body">
-                            <input type="text" placeholder="텍스트를 입력하세요.">
+                            <input type="text" placeholder="텍스트를 입력하세요." readonly>
                         </div>
                         <div class="btm">
                             <button class="delete_btn"></button>
@@ -208,9 +203,9 @@
 <script src="../assets/js/common.js"></script>
 <script>
     $(function(){
-        $('.required_toggle_btn').on('click', function(){
+        /* $('.required_toggle_btn').on('click', function(){
             $(this).toggleClass('active');
-        })
+        }) */
     })
 </script>
 </body>
